@@ -17,7 +17,7 @@ jobs:
         path: ~/.npm  # Example: cache npm deps (adjust for your project)
         key: cache-64297e2  # Exact fixed key they want
     
-    - name: Echo cache result  # Shows hit/miss as required
+    - name: prime-cache-64297e2  # Shows hit/miss as required
       run: echo "Cache result: ${{ steps.cache-64297e2.outcome }}"
     
     # Optional: Add a real dep install to demo speedup
