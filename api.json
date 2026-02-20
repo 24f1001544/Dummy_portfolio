@@ -3,6 +3,7 @@
     "email": "24f1001544@ds.study.iitm.ac.in",
     "version": "bbafaa4b"
   },
+  {
   "products": [
   {
     "id": "prod-bbafaa4b-001",
@@ -148,7 +149,8 @@
     "stock": 190,
     "rating": 2.7
   }
-],
+]},
+{
   "aggregations": {
     "electronics": {
       "count": 3,
@@ -171,5 +173,5 @@
       "inventoryValue": 115930.84
     }
   }
-
+}
 
