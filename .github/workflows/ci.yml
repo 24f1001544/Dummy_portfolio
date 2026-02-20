@@ -10,15 +10,16 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4  # Grabs your repo code
     
-    - name: Prime cache  # This is the required step name
+    - name: prime-cache-64297e2  # Exact name required
       id: cache-64297e2
-      uses: actions/cache@v4  # Latest version as required
+      uses: actions/cache@v4
       with:
-        path: ~/.npm  # Example: cache npm deps (adjust for your project)
-        key: cache-64297e2  # Exact fixed key they want
-    
-    - name: prime-cache-64297e2  # Shows hit/miss as required
-      run: echo "Cache result: ${{ steps.cache-64297e2.outcome }}"
+        path: ~/.npm  # Your deps path
+        key: cache-64297e2
+
+    - name: Echo cache result
+      run: echo "Cache result: ${{ steps.cache-64297e2.outputs.cache-hit }}"
+
     
     # Optional: Add a real dep install to demo speedup
     - name: Install dependencies
